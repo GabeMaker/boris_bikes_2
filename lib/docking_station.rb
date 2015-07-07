@@ -16,6 +16,12 @@ class DockingStation
     bikes.pop
   end
 
+  def release_broken_bikes
+    broken_bikes = bikes.select { |bike| !bike.working? }
+    bikes.delete_if { |bike| !bike.working? }
+    broken_bikes
+  end
+
   def dock bike
     fail 'Docking station full' if full?
     bikes << bike
@@ -23,7 +29,7 @@ class DockingStation
 
   private
 
-  attr_reader :bikes
+  attr_accessor :bikes
 
   def empty?
     bikes.empty?
