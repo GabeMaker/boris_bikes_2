@@ -27,7 +27,11 @@ I'd like docking stations to accept returning bikes (broken or not).
 
 As a maintainer of the system,
 So that I can control the distribution of bikes,
-I'd like docking stations not to accept more bikes than their capacity.
+I'd like docking stations to have a default capacity of 20 bikes.
+
+As a maintainer of the system,
+So that busy areas can be served more effectively,
+I want to be able to specify a larger capacity when necessary.
 
 As a maintainer of the system,
 So that I can manage broken bikes and not disappoint users,
