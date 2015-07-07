@@ -1,3 +1,7 @@
-### Boris Bikes ###
+### Boris Bikes 2 ###
 
-Gabe and Mark’s mad visit into the world of bikes, Borises and whatever else.
+Practicing pairing, OOD and TDD by making a model of the 'Boris Bike' cycle hire scheme.
+
+
+- Unit testing in RSpec
+- Feature testing using irb to manually simulate behaviour from user stories
