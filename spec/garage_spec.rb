@@ -17,14 +17,15 @@ describe Garage do
     expect(subject.bikes).to eq [bike, bike2]
   end
 
-  xit 'can fix broken bikes' do
+  it 'can fix broken bikes' do
     bike = double :bike, working?: false
     bike2 = double :bike, working?: false
+    expect(bike).to receive(:fix!)
+    expect(bike2).to receive(:fix!)
     subject.dock bike
     subject.dock bike2
     subject.fix_bikes
-    expect(bike).to receive(:fix!)
-    expect(bike2).to receive(:fix!)
+
   end
 
 end
