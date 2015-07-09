@@ -36,11 +36,13 @@ So that busy areas can be served more effectively,
 I want to be able to specify a larger capacity when necessary.
 
 
-IN PROGRESS:
+IN PROGRESS (manual feature testing):
 
 As a maintainer of the system,
 So that I can manage broken bikes and not disappoint users,
 I'd like vans to take broken bikes from docking stations and deliver them to garages to be fixed.
+
+TO DO:
 
 As a maintainer of the system,
 So that I can manage broken bikes and not disappoint users,
