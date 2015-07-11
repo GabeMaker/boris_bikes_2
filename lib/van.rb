@@ -9,7 +9,7 @@ class Van
   end
 
   def get_bikes_from(station)
-    bikes << station.release_broken_bikes
+    station.release_broken_bikes.each { |bike| bikes << bike }
   end
 
   def give_bikes_to(garage)
@@ -18,3 +18,4 @@ class Van
   end
 
 end
+
