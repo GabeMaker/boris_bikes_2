@@ -8,8 +8,12 @@ class Van
     @bikes = []
   end
 
-  def get_bikes_from(station)
-    station.release_broken_bikes.each { |bike| bikes << bike }
+  def get_bikes_from(place)
+    if place.class != DockingStation
+      place.release_broken_bikes.each { |bike| bikes << bike }
+    else
+      # code for getting working bikes if place.class == DockingStation
+    end
   end
 
   def give_bikes_to(garage)

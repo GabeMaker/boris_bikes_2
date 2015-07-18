@@ -6,7 +6,7 @@ describe Van do
 
   it 'should be able to take broken bikes from a docking station' do
     broken_bike = double :broken_bike, working?: false
-    station = double :station, release_broken_bikes: [broken_bike]
+    station = double :station, release_broken_bikes: [broken_bike], class: "DockingStation"
     subject.get_bikes_from(station)
     expect(subject.bikes).to eq [broken_bike]
   end
