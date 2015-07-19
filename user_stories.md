@@ -45,3 +45,21 @@ As a maintainer of the system,
 So that I can manage broken bikes and not disappoint users,
 I'd like vans to collect working bikes from garages and distribute them to docking stations.
 ```
+
+#### Manual irb feature tests
+Run `irb`, then:
+```ruby
+2.2.2 :001 > bike = Bike.new
+2.2.2 :002 > bike.report_broken
+2.2.2 :003 > station = DockingStation.new
+2.2.2 :004 > station.dock bike
+2.2.2 :005 > van = Van.new
+2.2.2 :006 > van.get_bikes_from station
+2.2.2 :007 > garage = Garage.new
+2.2.2 :008 > van.give_bikes_to garage
+2.2.2 :011 > garage.fix_bikes
+2.2.2 :012 > van.get_bikes_from garage
+2.2.2 :013 > van
+ => #<Van:0x007fdc94096870 @bikes=[]>
+```
+Van does not have any bikes, fixed or otherwise

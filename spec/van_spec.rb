@@ -20,4 +20,11 @@ describe Van do
     expect(subject.bikes).to eq []
     expect(garage.bikes).to eq [broken_bike]
   end
+
+  it 'can get fixed bikes from a garage' do
+    bike = double :bike, working?: false
+    garage = double :garage, release_bikes: [bike]
+    subject.get_bikes_from(garage)
+    expect(subject.bikes).to eq [bike]
+  end
 end

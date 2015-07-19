@@ -18,4 +18,3 @@ class Van
   end
 
 end
-
