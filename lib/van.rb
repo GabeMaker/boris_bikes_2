@@ -9,7 +9,7 @@ class Van
   end
 
   def get_bikes_from(place)
-    if place.class != DockingStation
+    if place.class != Garage
       place.release_broken_bikes.each { |bike| bikes << bike }
     else
       # code for getting working bikes if place.class == DockingStation
