@@ -53,10 +53,10 @@ describe DockingStation do
       subject.dock bike
       subject.dock broken_bike
       subject.dock broken_bike2
-      released_bikes = subject.release_broken_bikes
+      released_bikes = subject.release_bikes
       expect(released_bikes).to include broken_bike
       expect(released_bikes).to include broken_bike2
-      expect(subject.release_broken_bikes).to eq []
+      expect(subject.release_bikes).to eq []
     end
   end
 end

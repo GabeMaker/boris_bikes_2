@@ -16,7 +16,7 @@ class DockingStation
     bikes.pop
   end
 
-  def release_broken_bikes
+  def release_bikes
     broken_bikes = bikes.select { |bike| !bike.working? }
     bikes.delete_if { |bike| !bike.working? }
     broken_bikes
