@@ -39,7 +39,7 @@ As a maintainer of the system,
 So that I can manage broken bikes and not disappoint users,
 I'd like vans to take broken bikes from docking stations and deliver them to garages to be fixed.
 
-TO DO:
+IN PROGRESS:
 
 As a maintainer of the system,
 So that I can manage broken bikes and not disappoint users,
@@ -60,6 +60,5 @@ Run `irb`, then:
 2.2.2 :011 > garage.fix_bikes
 2.2.2 :012 > van.get_bikes_from garage
 2.2.2 :013 > van
- => #<Van:0x007fdc94096870 @bikes=[]>
 ```
-Van does not have any bikes, fixed or otherwise
+Van will now contain fixed bike.

@@ -11,3 +11,8 @@ Save time and automatically require lib/ files: 
 2. create a file '.irbrc' 
 3. Paste this into .irbrc: **Dir['./lib/*.rb'].each { |f| require f }** 
 
+
+## Refactoring needed:
+
+- use module to DRY-out duplicated functionality in bike containing classes.
+- investigate `release_bike` and `release_bikes` method for DockingStation.
