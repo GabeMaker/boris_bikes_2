@@ -1,6 +1,7 @@
 # Boris Bikes 2 #
+*by [Gabe](https://github.com/GabeMaker) and [Mark](https://github.com/Gwasanaethau)*
 
-Practicing pairing (Gabriel A and Mark P), OOD and TDD by making a model of the 'Boris Bike' cycle hire scheme. 
+Practicing pairing, OOD and TDD by making a model of the 'Boris Bike' cycle hire scheme. 
 
 - Unit testing in RSpec
 - Feature testing using irb to manually simulate behaviour from user stories
@@ -16,3 +17,6 @@ Save time and automatically require lib/ files: 
 
 - use module to DRY-out duplicated functionality in bike containing classes.
 - investigate `release_bike` and `release_bikes` method for DockingStation.
+
+
+**sometimes pairing on a shared laptop so not all of Mark's commits are attributed to him*
