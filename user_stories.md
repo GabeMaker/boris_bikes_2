@@ -57,8 +57,11 @@ Run `irb`, then:
 2.2.2 :006 > van.get_bikes_from station
 2.2.2 :007 > garage = Garage.new
 2.2.2 :008 > van.give_bikes_to garage
-2.2.2 :011 > garage.fix_bikes
-2.2.2 :012 > van.get_bikes_from garage
-2.2.2 :013 > van
+2.2.2 :009 > garage.fix_bikes
+2.2.2 :010 > van.get_bikes_from garage
+2.2.2 :011 > van
+2.2.2 :012 > van.give_biks_to station
+2.2.2 :013 > station
+
 ```
-Van will now contain fixed bike.
+Goal: station will now contain fixed bike.
