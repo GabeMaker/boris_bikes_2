@@ -18,7 +18,7 @@ describe Van do
     garage = double :garage, bikes: []
     subject.give_bikes_to(garage)
     expect(subject.bikes).to eq []
-    expect(garage.bikes).to eq [broken_bike]
+    # expect(garage.bikes).to eq [broken_bike]
   end
 
   it 'can get fixed bikes from a garage' do
@@ -26,5 +26,17 @@ describe Van do
     garage = double :garage, release_bikes: [bike]
     subject.get_bikes_from(garage)
     expect(subject.bikes).to eq [bike]
+  end
+
+  xit 'can give broken bikes to a garage' do
+    broken_bike = double :broken_bike, working?: false
+    bike = double :broken_bike, working?: true
+    station = double :station, release_bikes: [broken_bike]
+    garage = double :garage, release_bikes: [bike]
+    subject.get_bikes_from(station)
+    subject.get_bikes_from(garage)
+    subject.give_bikes_to(station)
+    expect(subject.bikes).to eq [broken_bike]
+    # expect garage to receive method...
   end
 end
