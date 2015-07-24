@@ -12,9 +12,24 @@ class Van
     place.release_bikes.each { |bike| bikes << bike }
   end
 
-  def give_bikes_to(place)
-    bikes.each { |bike| place.bikes << bike }
-    @bikes = []
+  def give_fixed_bikes_to(place)
+    bikes.each do |bike|
+      if bike.working?
+        place.bikes << bike
+        bikes.delete bike
+      end
+    end
+    @bikes
+  end
+
+  def give_broken_bikes_to(place)
+    bikes.each do |bike|
+      if bike.working? == false
+        place.bikes << bike
+        bikes.delete bike
+      end
+    end
+    @bikes
   end
 
 end
