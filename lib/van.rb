@@ -12,8 +12,8 @@ class Van
     place.release_bikes.each { |bike| bikes << bike }
   end
 
-  def give_bikes_to(garage)
-    bikes.each { |bike| garage.bikes << bike }
+  def give_bikes_to(place)
+    bikes.each { |bike| place.bikes << bike }
     @bikes = []
   end
 

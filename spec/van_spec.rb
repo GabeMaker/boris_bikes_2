@@ -18,7 +18,7 @@ describe Van do
     garage = double :garage, bikes: []
     subject.give_bikes_to(garage)
     expect(subject.bikes).to eq []
-    # expect(garage.bikes).to eq [broken_bike]
+    expect(garage.bikes).to eq [broken_bike]
   end
 
   it 'can get fixed bikes from a garage' do
@@ -28,15 +28,18 @@ describe Van do
     expect(subject.bikes).to eq [bike]
   end
 
-  xit 'can give broken bikes to a garage' do
+  # Van is currently giving all bikes to station.
+  # Need to either identify class of 'place' argument (station or garage)
+  # OR create separate methods for give_working_bikes and give_broken_bikes
+  xit 'can give fixed bikes to a station' do
     broken_bike = double :broken_bike, working?: false
     bike = double :broken_bike, working?: true
-    station = double :station, release_bikes: [broken_bike]
+    station = double :station, release_bikes: [broken_bike], bikes: []
     garage = double :garage, release_bikes: [bike]
     subject.get_bikes_from(station)
     subject.get_bikes_from(garage)
     subject.give_bikes_to(station)
     expect(subject.bikes).to eq [broken_bike]
-    # expect garage to receive method...
+    # ?expect garage to receive method...
   end
 end
