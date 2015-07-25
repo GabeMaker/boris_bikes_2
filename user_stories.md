@@ -39,14 +39,12 @@ As a maintainer of the system,
 So that I can manage broken bikes and not disappoint users,
 I'd like vans to take broken bikes from docking stations and deliver them to garages to be fixed.
 
-IN PROGRESS:
-
 As a maintainer of the system,
 So that I can manage broken bikes and not disappoint users,
 I'd like vans to collect working bikes from garages and distribute them to docking stations.
 ```
 
-#### Manual irb feature tests
+#### Manual irb feature tests example
 Run `irb`, then:
 ```ruby
 2.2.2 :001 > bike = Bike.new
@@ -56,12 +54,16 @@ Run `irb`, then:
 2.2.2 :005 > van = Van.new
 2.2.2 :006 > van.get_bikes_from station
 2.2.2 :007 > garage = Garage.new
-2.2.2 :008 > van.give_bikes_to garage
+2.2.2 :008 > van.give_broken_bikes_to garage
 2.2.2 :009 > garage.fix_bikes
 2.2.2 :010 > van.get_bikes_from garage
 2.2.2 :011 > van
-2.2.2 :012 > van.give_biks_to station
+2.2.2 :012 > van.give_fixed_bikes_to station
 2.2.2 :013 > station
 
 ```
-Goal: station will now contain fixed bike.
+Station will now contain fixed bike.
+
+This demonstrates the final user story.
+
+
