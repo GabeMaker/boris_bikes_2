@@ -2,7 +2,7 @@ require 'docking_station'
 
 describe DockingStation do
   it { is_expected.to respond_to :release_bike }
-  it { is_expected.to respond_to :release_bikes }
+  it { is_expected.to respond_to :unload_bikes }
 
   it 'should release a bike' do
     subject.dock Bike.new
@@ -54,10 +54,10 @@ describe DockingStation do
       subject.dock bike
       subject.dock broken_bike
       subject.dock broken_bike2
-      released_bikes = subject.release_bikes
+      released_bikes = subject.unload_bikes
       expect(released_bikes).to include broken_bike
       expect(released_bikes).to include broken_bike2
-      expect(subject.release_bikes).to eq []
+      expect(subject.unload_bikes).to eq []
     end
   end
 end

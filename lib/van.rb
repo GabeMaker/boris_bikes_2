@@ -9,7 +9,7 @@ class Van
   end
 
   def get_bikes_from(place)
-    place.release_bikes.each { |bike| bikes << bike }
+    place.unload_bikes.each { |bike| bikes << bike }
   end
 
   def give_fixed_bikes_to(place)

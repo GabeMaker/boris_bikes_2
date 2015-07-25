@@ -12,7 +12,7 @@ class Garage
     bikes << bike
   end
 
-  def release_bikes
+  def unload_bikes
     working_bikes = bikes.select { |bike| bike.working? }
     bikes.delete_if { |bike| bike.working? }
     working_bikes
